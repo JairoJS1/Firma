@@ -1,0 +1,20 @@
+.board {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+
+  canvas {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 3px #ccc;
+  }
+}
+
+button {
+  display: block;
+  margin-left: 3%;
+  margin-right: 3%;
+  cursor: pointer;
+}
+

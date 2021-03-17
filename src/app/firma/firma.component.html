@@ -1,0 +1,31 @@
+<div class="board" #board>
+  <canvas id="canvas" #background>Su navegador no soporta canvas :( </canvas>
+  <canvas id="canvas" #canvas>Su navegador no soporta canvas :( </canvas>
+</div>
+
+<mat-grid-list cols="2" rows="1" rowHeight="40px" *ngIf="showCleanOption || showDownloadOption" style="margin-top: 1%;">
+  <mat-grid-tile [colspan]="2" [rowspan]="1">
+    
+      <button *ngIf="showCleanOption" id="clean" mat-raised-button color="primary" (click)="clean()">
+        <mat-icon>cleaning_services</mat-icon> Limpiar
+      </button>
+    
+    <button *ngIf="showDownloadOption" id="save" mat-raised-button color="primary"
+      (click)="download(filename, quality)">
+      <mat-icon>get_app</mat-icon> Descargar
+    </button>
+ 
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="2" rows="1" rowHeight="100px"  style="margin-top: 1%;">
+<mat-grid-tile [colspan]="2" [rowspan]="1">
+<button id="undo"  mat-fab  (click)="undo()">
+  <mat-icon>undo</mat-icon>
+</button>
+  <button id="redo" mat-fab aria-label="Example icon button with a heart icon" (click)="redo()">
+    <mat-icon>redo</mat-icon>
+  </button>
+</mat-grid-tile>
+</mat-grid-list>
+<router-outlet></router-outlet>
